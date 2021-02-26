@@ -2,8 +2,7 @@ package br.com.loja.orcamento;
 
 import java.math.BigDecimal;
 
-public class Orcamento 
-{
+public class Orcamento {
 	private BigDecimal valor;
 
 	public Orcamento(BigDecimal valor) {
