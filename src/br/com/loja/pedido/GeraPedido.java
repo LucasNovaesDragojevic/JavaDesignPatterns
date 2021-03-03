@@ -1,28 +1,24 @@
 package br.com.loja.pedido;
 
-import java.math.BigDecimal;
+import java.util.List;
+
+import br.com.loja.orcamento.ItemOrcamento;
 
 public class GeraPedido {
 
 	private String cliente;
-	private BigDecimal valorOrcamento;
-	private Integer quantidadeItens;
+	private List<ItemOrcamento> itensOrcamento;
 	
-	public GeraPedido(String cliente, BigDecimal valorOrcamento, Integer quantidadeItens) {
+	public GeraPedido(String cliente, List<ItemOrcamento> itensOrcamento) {
 		this.cliente = cliente;
-		this.valorOrcamento = valorOrcamento;
-		this.quantidadeItens = quantidadeItens;
+		this.itensOrcamento = itensOrcamento;
 	}
 
 	public String getCliente() {
 		return cliente;
 	}
 
-	public BigDecimal getValorOrcamento() {
-		return valorOrcamento;
-	}
-
-	public Integer getQuantidadeItens() {
-		return quantidadeItens;
+	public List<ItemOrcamento> getItensOrcamento() {
+		return this.itensOrcamento;
 	}
 }

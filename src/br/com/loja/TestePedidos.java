@@ -3,6 +3,7 @@ package br.com.loja;
 import java.math.BigDecimal;
 import java.util.Arrays;
 
+import br.com.loja.orcamento.ItemOrcamento;
 import br.com.loja.pedido.GeraPedido;
 import br.com.loja.pedido.GeraPedidoHandler;
 import br.com.loja.pedido.acao.EnviarEmailPedido;
@@ -12,9 +13,7 @@ public class TestePedidos {
 
 	public static void main(String[] args) {
 		String cliente = "Rodrigo";
-		BigDecimal valorOrcamento = new BigDecimal("300");
-		Integer quantidadeItens = Integer.parseInt("2");
-		GeraPedido gerador = new GeraPedido(cliente, valorOrcamento, quantidadeItens);
+		GeraPedido gerador = new GeraPedido(cliente, Arrays.asList(new ItemOrcamento(new BigDecimal("1000"))));
 		GeraPedidoHandler geraPedidoHandler = 
 				new GeraPedidoHandler(
 						Arrays.asList(new SalvarPedidoNoBancoDeDados(), new EnviarEmailPedido())

@@ -15,7 +15,8 @@ public class GeraPedidoHandler {
 	}
 
 	public void executa(GeraPedido dados) {
-		Orcamento orcamento = new Orcamento(dados.getValorOrcamento(), dados.getQuantidadeItens());
+		Orcamento orcamento = new Orcamento();
+		dados.getItensOrcamento().forEach(item -> orcamento.adicionarItem(item));
 		
 		Pedido pedido = new Pedido(dados.getCliente(), LocalDateTime.now(), orcamento);
 		
