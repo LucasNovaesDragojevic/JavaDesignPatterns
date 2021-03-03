@@ -2,19 +2,19 @@ package br.com.loja.orcamento;
 
 import java.math.BigDecimal;
 
-public class OrcamentoProxy extends Orcamento {
+public class OrcamentoProxy implements Orcavel {
 
 	private BigDecimal valor;
-	private Orcamento orcamento;
+	private Orcavel orcavel;
 	
-	public OrcamentoProxy(Orcamento orcamento) {
-		this.orcamento = orcamento;
+	public OrcamentoProxy(Orcavel orcavel) {
+		this.orcavel = orcavel;
 	}
 	
 	@Override
 	public BigDecimal getValor() {
 		if (this.valor == null)
-			this.valor = orcamento.getValor();
+			this.valor = orcavel.getValor();
 		
 		return this.valor;
 	}
