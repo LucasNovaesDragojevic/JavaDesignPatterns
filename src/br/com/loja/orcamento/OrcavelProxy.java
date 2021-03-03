@@ -2,12 +2,12 @@ package br.com.loja.orcamento;
 
 import java.math.BigDecimal;
 
-public class OrcamentoProxy implements Orcavel {
+public class OrcavelProxy implements Orcavel {
 
 	private BigDecimal valor;
 	private Orcavel orcavel;
 	
-	public OrcamentoProxy(Orcavel orcavel) {
+	public OrcavelProxy(Orcavel orcavel) {
 		this.orcavel = orcavel;
 	}
 	

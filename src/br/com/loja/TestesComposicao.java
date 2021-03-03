@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 import br.com.loja.orcamento.ItemOrcamento;
 import br.com.loja.orcamento.Orcamento;
-import br.com.loja.orcamento.OrcamentoProxy;
+import br.com.loja.orcamento.OrcavelProxy;
 
 public class TestesComposicao {
 
@@ -17,7 +17,7 @@ public class TestesComposicao {
 		novo.adicionarItem(new ItemOrcamento(new BigDecimal("500")));
 		novo.adicionarItem(antigo);
 		
-		OrcamentoProxy proxy = new OrcamentoProxy(novo);
+		OrcavelProxy proxy = new OrcavelProxy(novo);
 
 		System.out.println(proxy.getValor());
 		System.out.println(proxy.getValor());
